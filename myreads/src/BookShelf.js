@@ -5,7 +5,14 @@ import Book from './Book'
 class BookShelf extends Component {
 
     render() {
-        return (<div>A Book Shelf
+        return (
+
+        <div>
+        <h2>{this.props.title} ({this.props.id})</h2>
+        <ol>
+           {
+                this.props.books.map( (book) => (
+                    <li key={book.id}>
                      <Book
                         id="id 000" 
                         title="A Title" 
@@ -14,7 +21,11 @@ class BookShelf extends Component {
                         authors={["author Hariet", "author Chuck"]}
                         shelf="read"
                       />
-
+                     </li>
+                ))
+           }
+            
+        </ol>
         </div>)
     }
 
