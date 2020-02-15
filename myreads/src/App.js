@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {Route, Link} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
+import Book from './Book';
 
 class App extends Component {
 
@@ -14,18 +15,20 @@ class App extends Component {
           <Route exact path="/" render={
             () => (
                 <div>Main Page
-                    <p>
+                <p/>
                      <Link to="/search">Go to Search</Link>
-                    </p>
+                     <p/>
+                     <Book/>
                 </div>
             )
           }/>
           <Route exact path="/search" render={
             () => (
                 <div>Search Page
-                    <p>
+                <p/>
                      <Link to="/">Go to Home</Link>
-                    </p>
+                     <p/>
+                     <Book/>
                 </div>
             )
           }/>
