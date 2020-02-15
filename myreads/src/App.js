@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import {Route} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 
@@ -13,12 +13,20 @@ class App extends Component {
         <div className="App">
           <Route exact path="/" render={
             () => (
-                <div>Main Page</div>
+                <div>Main Page
+                    <p>
+                     <Link to="/search">Go to Search</Link>
+                    </p>
+                </div>
             )
           }/>
           <Route exact path="/search" render={
             () => (
-                <div>Search Page</div>
+                <div>Search Page
+                    <p>
+                     <Link to="/">Go to Home</Link>
+                    </p>
+                </div>
             )
           }/>
         </div>
