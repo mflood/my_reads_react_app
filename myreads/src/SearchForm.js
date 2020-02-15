@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
+import PropTypes from 'prop-types'
+import BookShelf from './BookShelf';
 
 class SearchForm extends Component {
 
@@ -22,6 +24,7 @@ class SearchForm extends Component {
 
             if (typeof results.error !== 'undefined') {
                 // no books came back
+                console.log("0 results returned")
                 this.setState({books: []})
             } else {
                 this.setState({books: results})
@@ -30,6 +33,9 @@ class SearchForm extends Component {
       }
   }
 
+  updateBookshelfFunction = (bookId, shelfId) => {
+    console.log("updateBookshelfFunction", bookId, shelfId)
+  }
 
   render() {
     return (
@@ -57,12 +63,24 @@ class SearchForm extends Component {
               <ol className="books-grid">
                 <li key="1">Num results: { this.state.books.length}</li>
               </ol>
+                     <BookShelf
+                        id="none"
+                        title="Search Results"
+                        books={this.state.books}
+                        shelves={this.props.shelves}
+                        updateBookshelfFunction={this.updateBookshelfFunction}
+                        doFilter={false} 
+                        />
             </div>
           </div>
     )
 
   }
 
+}
+
+SearchForm.propTypes = {
+    shelves: PropTypes.array.isRequired,
 }
 
 export default SearchForm;
