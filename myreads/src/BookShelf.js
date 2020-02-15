@@ -14,12 +14,11 @@ class BookShelf extends Component {
                 this.props.books.map( (book) => (
                     <li key={book.id}>
                      <Book
-                        id="id 000" 
-                        title="A Title" 
-                        imageLinks={{
-                        smallThumbnail: "http://books.google.com/books/content?id=sJf1vQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"}}
-                        authors={["author Hariet", "author Chuck"]}
-                        shelf="read"
+                        id={book.id}
+                        title={book.title}
+                        imageLinks={book.imageLinks}
+                        authors={book.authors}
+                        shelf={book.shelf}
                       />
                      </li>
                 ))
