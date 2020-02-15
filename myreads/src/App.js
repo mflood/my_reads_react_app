@@ -1,13 +1,30 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import {Route} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
 
-    </div>
-  );
+
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Route exact path="/" render={
+            () => (
+                <div>Main Page</div>
+            )
+          }/>
+          <Route exact path="/search" render={
+            () => (
+                <div>Search Page</div>
+            )
+          }/>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
