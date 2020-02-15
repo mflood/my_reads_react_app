@@ -10,6 +10,11 @@ import * as BooksAPI from './BooksAPI'
 
 class App extends Component {
 
+  state = {
+    books: [],
+    shelves: []
+  }
+
   componentDidMount() {
     BooksAPI.getAll()
       .then((results) => {
@@ -30,7 +35,14 @@ class App extends Component {
                 <p/>
                      <Link to="/search">Go to Search</Link>
                      <p/>
-                     <Book/>
+                     <Book
+                        id="id 000" 
+                        title="A Title" 
+                        imageLinks={{
+                        smallThumbnail: "http://books.google.com/books/content?id=sJf1vQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"}}
+                        authors={["author Hariet", "author Chuck"]}
+                        shelf="read"
+                      />
                      <p/>
                      <BookShelf/>
                 </div>
