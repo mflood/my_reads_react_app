@@ -11,6 +11,7 @@ This app depends on a books api provided by the creators of the course:
 
 Specifically, **BooksAPI.js** is provided to interact with that service
 
+> Also of note, the bookshelf ids need to be "read", "wantToRead", "currentlyReading"
 
 ## Running development server
 
