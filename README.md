@@ -62,9 +62,8 @@ If a book is assigned to a shelf on the main page and that book appears on the s
 When an item is categorized on the search page and the user navigates to the main page, it appears on that shelf in the main page.
 
 ### Routing
-- The main page contains a link to the search page. When the link is clicked, the search page is displayed and the URL in the browser’s address bar is /search.
-- The search page contains a link to the main page. When the link is clicked, the main page is displayed and the URL in the browser’s address bar is /.
-
+- [x] The main page contains a link to the search page. When the link is clicked, the search page is displayed and the URL in the browser’s address bar is /search.
+- [x] The search page contains a link to the main page. When the link is clicked, the main page is displayed and the URL in the browser’s address bar is /.
 
 ### Code Functionality
 
