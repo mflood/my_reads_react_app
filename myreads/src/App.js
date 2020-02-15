@@ -72,6 +72,7 @@ class App extends Component {
                         books={this.state.books}
                         shelves={this.state.shelves}
                         updateBookshelfFunction={this.updateBookshelfFunction}
+                        doFilter={true} 
                         />
                      <BookShelf
                         id="wantToRead"
@@ -79,6 +80,7 @@ class App extends Component {
                         books={this.state.books}
                         shelves={this.state.shelves}
                         updateBookshelfFunction={this.updateBookshelfFunction}
+                        doFilter={true} 
                         />
                      <BookShelf
                         id="read"
@@ -86,13 +88,14 @@ class App extends Component {
                         books={this.state.books}
                         shelves={this.state.shelves}
                         updateBookshelfFunction={this.updateBookshelfFunction}
+                        doFilter={true} 
                         />
                 </div>
             )
           }/>
           <Route exact path="/search" render={
             () => (
-                 <SearchForm/>
+                 <SearchForm shelves={this.state.shelves}/>
             )
           }/>
         </div>

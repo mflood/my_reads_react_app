@@ -5,6 +5,8 @@ import Book from './Book'
 class BookShelf extends Component {
 
     render() {
+
+        const booksToShow = this.props.doFilter ? this.props.books.filter( (book) => (book.shelf === this.props.id) ) : this.props.books
         return (
 
         <div>
@@ -12,7 +14,7 @@ class BookShelf extends Component {
         <hr/>
         <ol className="books-grid">
            {
-                this.props.books.filter( (book) => (book.shelf === this.props.id) ).map( (book) => (
+                booksToShow.map( (book) => (
                     <li key={book.id}>
                      <Book
                         id={book.id}
@@ -35,9 +37,12 @@ class BookShelf extends Component {
 
 BookShelf.propTypes = {
     id: PropTypes.string.isRequired,
+    // if true, only show books in this bookshelf
+    doFilter: PropTypes.bool.isRequired,
     title: PropTypes.string.isRequired,
     books: PropTypes.array.isRequired,
     shelves: PropTypes.array.isRequired,
     updateBookshelfFunction: PropTypes.func.isRequired,
 }
+
 export default BookShelf;
