@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 class Book extends Component {
 
+    updateBookshelf = (event) => {
+        console.log(event.target.value)
+        this.props.updateBookshelfFunction(this.props.id, event.target.value)
+    }
+
     render() {
     console.log(this.props)
         return (
@@ -14,7 +19,9 @@ class Book extends Component {
                     style={{ width: 128, height: 193}} />
             </div>
                   <div className="book-shelf-changer">
-                  <select value={this.props.shelf}>
+                  <select value={this.props.shelf}
+                    onChange={this.updateBookshelf}
+                  >
                     <option value="move" disabled>Move to...</option>
                     {
                         this.props.shelves.map(
@@ -44,6 +51,7 @@ Book.propTypes = {
     authors: PropTypes.array.isRequired,
     shelf: PropTypes.string.isRequired,
     shelves: PropTypes.array.isRequired,
+    updateBookshelfFunction: PropTypes.func.isRequired,
 }
 
 export default Book;

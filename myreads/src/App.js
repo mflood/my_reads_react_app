@@ -37,6 +37,12 @@ class App extends Component {
       })  
   }
 
+
+  updateBookshelfFunction = (bookId, shelfId) => {
+    console.log("updateBookshelfFunction", bookId, shelfId)
+
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -52,18 +58,21 @@ class App extends Component {
                         title="Currently Reading"
                         books={this.state.books}
                         shelves={this.state.shelves}
+                        updateBookshelfFunction={this.updateBookshelfFunction}
                         />
                      <BookShelf
                         id="wantToRead" 
                         title="Want to Read"
                         books={this.state.books}
                         shelves={this.state.shelves}
+                        updateBookshelfFunction={this.updateBookshelfFunction}
                         />
                      <BookShelf
                         id="read" 
                         title="Books I have Read"
                         books={this.state.books}
                         shelves={this.state.shelves}
+                        updateBookshelfFunction={this.updateBookshelfFunction}
                         />
                 </div>
             )

@@ -21,6 +21,7 @@ class BookShelf extends Component {
                         authors={book.authors}
                         shelf={book.shelf}
                         shelves={this.props.shelves}
+                        updateBookshelfFunction={this.props.updateBookshelfFunction}
                       />
                      </li>
                 ))
@@ -37,5 +38,6 @@ BookShelf.propTypes = {
     title: PropTypes.string.isRequired,
     books: PropTypes.array.isRequired,
     shelves: PropTypes.array.isRequired,
+    updateBookshelfFunction: PropTypes.func.isRequired,
 }
 export default BookShelf;
