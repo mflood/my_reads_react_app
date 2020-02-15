@@ -9,6 +9,7 @@ class BookShelf extends Component {
 
         <div>
         <h2>{this.props.title} ({this.props.id})</h2>
+        <hr/>
         <ol>
            {
                 this.props.books.filter( (book) => (book.shelf == this.props.id) ).map( (book) => (
@@ -19,6 +20,7 @@ class BookShelf extends Component {
                         imageLinks={book.imageLinks}
                         authors={book.authors}
                         shelf={book.shelf}
+                        shelves={this.props.shelves}
                       />
                      </li>
                 ))
@@ -33,6 +35,7 @@ class BookShelf extends Component {
 BookShelf.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    books: PropTypes.array.isRequired
+    books: PropTypes.array.isRequired,
+    shelves: PropTypes.array.isRequired,
 }
 export default BookShelf;

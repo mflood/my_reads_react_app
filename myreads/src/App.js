@@ -11,6 +11,20 @@ class App extends Component {
 
   state = {
     books: [],
+    shelves: [
+        {
+            id: "currentlyReading",
+            title: "Currently Reading"
+        },
+        {
+            id: "wantToRead",
+            title: "Want to Read"
+        },
+        {
+            id: "read",
+            title: "Read"
+        },
+    ]
   }
 
   componentDidMount() {
@@ -37,16 +51,19 @@ class App extends Component {
                         id="currentlyReading" 
                         title="Currently Reading"
                         books={this.state.books}
+                        shelves={this.state.shelves}
                         />
                      <BookShelf
                         id="wantToRead" 
                         title="Want to Read"
                         books={this.state.books}
+                        shelves={this.state.shelves}
                         />
                      <BookShelf
                         id="read" 
                         title="Books I have Read"
                         books={this.state.books}
+                        shelves={this.state.shelves}
                         />
                 </div>
             )
