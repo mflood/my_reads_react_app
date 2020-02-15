@@ -4,6 +4,7 @@ import {Route, Link} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 import Book from './Book';
+import BookShelf from './BookShelf';
 
 class App extends Component {
 
@@ -19,6 +20,8 @@ class App extends Component {
                      <Link to="/search">Go to Search</Link>
                      <p/>
                      <Book/>
+                     <p/>
+                     <BookShelf/>
                 </div>
             )
           }/>
@@ -29,6 +32,8 @@ class App extends Component {
                      <Link to="/">Go to Home</Link>
                      <p/>
                      <Book/>
+                     <p/>
+                     <BookShelf/>
                 </div>
             )
           }/>
