@@ -5,9 +5,9 @@ import logo from './logo.svg';
 import './App.css';
 import Book from './Book';
 import BookShelf from './BookShelf';
+import SearchForm from './SearchForm';
 
 class App extends Component {
-
 
   render() {
     return (
@@ -34,6 +34,8 @@ class App extends Component {
                      <Book/>
                      <p/>
                      <BookShelf/>
+                     <p/>
+                     <SearchForm/>
                 </div>
             )
           }/>
