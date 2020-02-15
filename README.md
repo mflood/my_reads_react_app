@@ -40,9 +40,9 @@ Rubric is here, but is only accesible if you are logged into the Udacity Course.
 - [x] An updated README that describes the project and has instructions for installing and launching the project is included.
 
 ### Main Page
-- The main page shows 3 shelves for books. Each book is shown on the correct shelf, along with its title and all of its authors.
-- The main page shows a control that allows users to move books between shelves. The control should be tied to each book instance. The functionality of moving a book to a different shelf works correctly.
-- When the browser is refreshed, the same information is displayed on the page.
+- [x] The main page shows 3 shelves for books. Each book is shown on the correct shelf, along with its title and all of its authors.
+- [x] The main page shows a control that allows users to move books between shelves. The control should be tied to each book instance. The functionality of moving a book to a different shelf works correctly.
+- [x] When the browser is refreshed, the same information is displayed on the page.
 
 ### Search Page
 
