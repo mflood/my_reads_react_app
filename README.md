@@ -71,3 +71,15 @@ When an item is categorized on the search page and the user navigates to the mai
 - Books have the same state on both the search page and the main application page: If a book is on a bookshelf, that is reflected in both locations.
 - The code runs without errors. There are no warnings that resulted from not following the best practices listed in the documentation, such as using key for list items. All code is functional and formatted properly.
 
+
+## Search Terms
+
+The backend api is limited to search terms found here:
+
+[https://github.com/udacity/reactnd-project-myreads-starter/blob/0d622b93fa02d06d15234a83f27b84b677c5a627/SEARCH_TERMS.md](https://github.com/udacity/reactnd-project-myreads-starter/blob/0d622b93fa02d06d15234a83f27b84b677c5a627/SEARCH_TERMS.md)
+
+Examples include:
+    - Horror
+    - Drawing
+    - Games
+    - Design
