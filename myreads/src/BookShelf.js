@@ -11,7 +11,7 @@ class BookShelf extends Component {
         <h2>{this.props.title} ({this.props.id})</h2>
         <ol>
            {
-                this.props.books.map( (book) => (
+                this.props.books.filter( (book) => (book.shelf == this.props.id) ).map( (book) => (
                     <li key={book.id}>
                      <Book
                         id={book.id}
