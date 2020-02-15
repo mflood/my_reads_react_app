@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import {Route, Link} from 'react-router-dom'
-import logo from './logo.svg';
 import './App.css';
 import BookShelf from './BookShelf';
 import SearchForm from './SearchForm';
