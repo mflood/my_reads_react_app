@@ -3,7 +3,6 @@
 MyReads React App - my final project for Udacity React Fundamentals Course
 
 
-
 ## External dependencies
 
 This app depends on a books api provided by the creators of the course:
@@ -19,6 +18,14 @@ Specifically, **BooksAPI.js** is provided to interact with that service
 
 ```
 ./start_dev_server.sh
+```
+
+As an alternative, you can run the npm commands directly:
+
+```
+cd myreads/
+npm install
+npm start
 ```
 
 
