@@ -35,8 +35,8 @@ Rubric is here, but is only accesible if you are logged into the Udacity Course.
 [https://review.udacity.com/#!/rubrics/918/view](https://review.udacity.com/#!/rubrics/918/view)
 
 ### Application Setup
-- The application was created with create-react-app and requires only npm install and npm start to get it installed and launched.
-- An updated README that describes the project and has instructions for installing and launching the project is included.
+- [x] The application was created with create-react-app and requires only npm install and npm start to get it installed and launched.
+- [x] An updated README that describes the project and has instructions for installing and launching the project is included.
 
 ### Main Page
 - The main page shows 3 shelves for books. Each book is shown on the correct shelf, along with its title and all of its authors.
