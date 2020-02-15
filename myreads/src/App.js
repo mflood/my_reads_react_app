@@ -93,12 +93,7 @@ class App extends Component {
           }/>
           <Route exact path="/search" render={
             () => (
-                <div>Search Page
-                <p/>
-                     <Link to="/">Go to Home</Link>
-                     <p/>
-                     <SearchForm/>
-                </div>
+                 <SearchForm/>
             )
           }/>
         </div>
