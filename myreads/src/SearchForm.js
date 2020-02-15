@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
+import * as BooksAPI from './BooksAPI'
 
 class SearchForm extends Component {
 
-    render() {
-        return (<div>A SearchForm</div>)
-    }
+  componentDidMount() {
+    BooksAPI.search('Horror')
+      .then((results) => {
+        console.log(results)
+        //this.setState(() => ({
+        //  contacts
+        //})) 
+      })  
+  }
+
+  render() {
+       return (<div>A SearchForm</div>)
+  }
 
 }
 

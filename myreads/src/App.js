@@ -6,8 +6,19 @@ import './App.css';
 import Book from './Book';
 import BookShelf from './BookShelf';
 import SearchForm from './SearchForm';
+import * as BooksAPI from './BooksAPI'
 
 class App extends Component {
+
+  componentDidMount() {
+    BooksAPI.getAll()
+      .then((results) => {
+        console.log(results)
+        //this.setState(() => ({
+        //  contacts
+        //})) 
+      })  
+  }
 
   render() {
     return (
