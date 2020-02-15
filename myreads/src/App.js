@@ -33,14 +33,28 @@ class App extends Component {
         console.log(results)
         this.setState(() => ({
           books: results
-        })) 
-      })  
+        }))
+      })
   }
 
 
   updateBookshelfFunction = (bookId, shelfId) => {
     console.log("updateBookshelfFunction", bookId, shelfId)
 
+    // get book
+    BooksAPI.update({id: bookId}, shelfId)
+      .then((results) => {
+        console.log("update results:", results)
+
+            // reload all books
+            BooksAPI.getAll()
+          .then((results) => {
+            console.log(results)
+            this.setState(() => ({
+              books: results
+            }))
+           })
+      })
   }
 
   render() {
@@ -54,21 +68,21 @@ class App extends Component {
                      <Link to="/search">Go to Search</Link>
                      <p/>
                      <BookShelf
-                        id="currentlyReading" 
+                        id="currentlyReading"
                         title="Currently Reading"
                         books={this.state.books}
                         shelves={this.state.shelves}
                         updateBookshelfFunction={this.updateBookshelfFunction}
                         />
                      <BookShelf
-                        id="wantToRead" 
+                        id="wantToRead"
                         title="Want to Read"
                         books={this.state.books}
                         shelves={this.state.shelves}
                         updateBookshelfFunction={this.updateBookshelfFunction}
                         />
                      <BookShelf
-                        id="read" 
+                        id="read"
                         title="Books I have Read"
                         books={this.state.books}
                         shelves={this.state.shelves}
