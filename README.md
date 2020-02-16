@@ -1,6 +1,6 @@
 # MyReads React App
 
-The MyReads app provides an interface to manage virtual bookshelves which keep track of books you are reading, want to read and have read.
+> The MyReads app provides an interface to manage virtual bookshelves which keep track of books you are reading, want to read and have read.
 
 > This is my final project for Udacity React Fundamentals Course
 
