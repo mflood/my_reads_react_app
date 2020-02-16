@@ -46,8 +46,8 @@ npm start
 
 > Examples include:
 
-    - Horror
-    - Drawing
-    - Games
-    - Biography
+- Horror
+- Drawing
+- Games
+- Biography
 
