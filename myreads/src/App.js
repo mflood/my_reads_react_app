@@ -62,8 +62,7 @@ class App extends Component {
         <div className="App">
           <Route exact path="/" render={
             () => (
-                <div>Main Page
-                <p/>
+                <div>
                      <Link to="/search">Go to Search</Link>
                      <p/>
                      <BookShelf

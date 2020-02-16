@@ -70,9 +70,6 @@ class SearchForm extends Component {
               </div>
             </div>
             <div className="search-books-results">
-              <ol className="books-grid">
-                <li key="1">Num results: { this.state.books.length}</li>
-              </ol>
                      <BookShelf
                         id="none"
                         title="Search Results"

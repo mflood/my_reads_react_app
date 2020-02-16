@@ -10,7 +10,7 @@ class BookShelf extends Component {
         return (
 
         <div>
-        <h2>{this.props.title} ({this.props.id})</h2>
+        <h2>{this.props.title}</h2>
         <hr/>
         <ol className="books-grid">
            {
