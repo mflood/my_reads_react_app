@@ -10,8 +10,7 @@ class BookShelf extends Component {
         return (
 
         <div>
-        <h2>{this.props.title}</h2>
-        <hr/>
+        <h2 className="bookshelf-title">{this.props.title}</h2>
         <ol className="books-grid">
            {
                 booksToShow.map( (book) => (
