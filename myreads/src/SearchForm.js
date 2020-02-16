@@ -33,11 +33,9 @@ class SearchForm extends Component {
       }
   }
 
-  updateBookshelfFunction = (bookId, shelfId) => {
-    console.log("updateBookshelfFunction", bookId, shelfId)
-  }
-
   render() {
+
+    
     return (
 <div className="search-books">
             <div className="search-books-bar">
@@ -68,19 +66,19 @@ class SearchForm extends Component {
                         title="Search Results"
                         books={this.state.books}
                         shelves={this.props.shelves}
-                        updateBookshelfFunction={this.updateBookshelfFunction}
+                        updateBookshelfFunction={this.props.updateBookshelfFunction}
                         doFilter={false} 
                         />
             </div>
           </div>
     )
-
   }
-
 }
 
 SearchForm.propTypes = {
     shelves: PropTypes.array.isRequired,
+    updateBookshelfFunction: PropTypes.func.isRequired,
+    books: PropTypes.array.isRequired,
 }
 
 export default SearchForm;

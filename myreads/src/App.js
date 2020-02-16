@@ -95,7 +95,11 @@ class App extends Component {
           }/>
           <Route exact path="/search" render={
             () => (
-                 <SearchForm shelves={this.state.shelves}/>
+                 <SearchForm 
+                    shelves={this.state.shelves}
+                    updateBookshelfFunction={this.updateBookshelfFunction}
+                    books={this.state.books}
+                    />
             )
           }/>
         </div>
