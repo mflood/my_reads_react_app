@@ -21,13 +21,16 @@ class SearchForm extends Component {
         BooksAPI.search(e.target.value)
         .then((results) => {
             console.log(results);
-
             if (typeof results.error !== 'undefined') {
                 // no books came back
                 console.log("0 results returned")
                 this.setState({books: []})
             } else {
-                this.setState({books: results})
+
+                // filter out books that do not have imageLinks
+                const thumbnailBooks = results.filter( (book) => (book.imageLinks != undefined) )
+
+                this.setState({books: thumbnailBooks})
             }
         })
       }
