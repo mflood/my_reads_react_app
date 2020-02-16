@@ -35,15 +35,13 @@ class SearchForm extends Component {
 
   lookupBookShelf = (bookId) => {
 
-    for (const item of this.props.books){
-      console.log("compare", item.id, bookId)
-
-      if (item.id === bookId) {
-        console.log("****** match ******");
-        return item.shelf;
-      }
+    const shelf = this.props.bookShelfLookup[bookId]
+    if (shelf == undefined) {
+        return "none"
+    } else {
+        return shelf
     }
-    return "none";
+
   }
 
   render() {
@@ -92,7 +90,7 @@ class SearchForm extends Component {
 SearchForm.propTypes = {
     shelves: PropTypes.array.isRequired,
     updateBookshelfFunction: PropTypes.func.isRequired,
-    books: PropTypes.array.isRequired,
+    bookShelfLookup: PropTypes.object.isRequired,
 }
 
 export default SearchForm;

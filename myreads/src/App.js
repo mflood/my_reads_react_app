@@ -94,13 +94,22 @@ class App extends Component {
             )
           }/>
           <Route exact path="/search" render={
-            () => (
+            () => {
+
+            // create object to lookup shelf by book id
+            //
+            var bookShelfLookup = {}
+            this.state.books.forEach(book => {
+                bookShelfLookup[book.id] = book.shelf;
+            });
+
+            return (
                  <SearchForm 
                     shelves={this.state.shelves}
                     updateBookshelfFunction={this.updateBookshelfFunction}
-                    books={this.state.books}
+                    bookShelfLookup={bookShelfLookup}
                     />
-            )
+            )}
           }/>
         </div>
       </BrowserRouter>
