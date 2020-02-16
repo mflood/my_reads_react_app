@@ -12,18 +12,14 @@ class SearchForm extends Component {
 
   handleSearchTextChanged = (e) => {
 
-      console.log("handleSearchTextChanged", e.target.value);
-
       if (e.target.value === "") {
         this.setState({books: []})
       } else {
         // make api call 
         BooksAPI.search(e.target.value)
         .then((results) => {
-            console.log(results);
             if (typeof results.error !== 'undefined') {
                 // no books came back
-                console.log("0 results returned")
                 this.setState({books: []})
             } else {
 

@@ -3,15 +3,13 @@ import PropTypes from 'prop-types'
 class Book extends Component {
 
     updateBookshelf = (event) => {
-        console.log(event.target.value)
         this.props.updateBookshelfFunction(this.props.id, event.target.value)
     }
 
     render() {
 
-    const currentShelf = this.props.shelf ? this.props.shelf : "none";
+        const currentShelf = this.props.shelf ? this.props.shelf : "none";
 
-    console.log(this.props)
         return (
         <div className="book">
             <div className="book-top">

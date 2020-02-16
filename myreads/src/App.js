@@ -29,7 +29,6 @@ class App extends Component {
   componentDidMount() {
     BooksAPI.getAll()
       .then((results) => {
-        console.log(results)
         this.setState(() => ({
           books: results
         }))
@@ -38,17 +37,14 @@ class App extends Component {
 
 
   updateBookshelfFunction = (bookId, shelfId) => {
-    console.log("updateBookshelfFunction", bookId, shelfId)
 
     // get book
     BooksAPI.update({id: bookId}, shelfId)
       .then((results) => {
-        console.log("update results:", results)
 
             // reload all books
             BooksAPI.getAll()
           .then((results) => {
-            console.log(results)
             this.setState(() => ({
               books: results
             }))
