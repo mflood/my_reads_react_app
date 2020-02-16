@@ -33,9 +33,17 @@ class SearchForm extends Component {
       }
   }
 
+
+  lookupBookshelf = (bookId) => {
+    console.log("lookupBookshelf", this.props.books) 
+    console.log("bookId", bookId) 
+    return "read"
+  }
+
   render() {
 
-    
+    const booksToShow = this.state.books.map( (item) =>  ({...item, shelf: "none"}))
+
     return (
 <div className="search-books">
             <div className="search-books-bar">
@@ -64,7 +72,7 @@ class SearchForm extends Component {
                      <BookShelf
                         id="none"
                         title="Search Results"
-                        books={this.state.books}
+                        books={booksToShow}
                         shelves={this.props.shelves}
                         updateBookshelfFunction={this.props.updateBookshelfFunction}
                         doFilter={false} 
