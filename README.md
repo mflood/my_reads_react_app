@@ -1,18 +1,11 @@
 # MyReads React App
 
+The MyReads app provides an interface to manage virtual bookshelves which keep track of books you are reading, want to read and have read.
+
 > This is my final project for Udacity React Fundamentals Course
 
-## External dependencies
 
-> This app depends on a books api provided by the creators of the course:
-
-    https://github.com/udacity/reactnd-project-myreads-starter
-
-> Specifically, **BooksAPI.js** is provided to interact with that service
-
-> Also of note, the bookshelf ids need to be "read", "wantToRead", "currentlyReading"
-
-## Running development server
+## Getting Started
 
 > To launch the app locally, You can run the utility script:
 
@@ -28,6 +21,15 @@ npm install
 npm start
 ```
 
+## External dependencies
+
+> This app depends on a books api provided by the creators of the course:
+
+    https://github.com/udacity/reactnd-project-myreads-starter
+
+> Specifically, **BooksAPI.js** is provided to interact with that service
+
+> Also of note, the bookshelf ids need to be "read", "wantToRead", "currentlyReading"
 
 ## Project Requirements
 
@@ -36,7 +38,6 @@ npm start
 [https://review.udacity.com/#!/rubrics/918/view](https://review.udacity.com/#!/rubrics/918/view)
 
 > NOTE: it is only accesible if you are logged into the Udacity Course.
-
 
 ## Search Terms
 
@@ -55,4 +56,5 @@ npm start
 ## Credits
 
 Styling, icons, the API and BooksAPI.js provided by Udacity Course Instructors:
+
 [https://github.com/udacity/reactnd-project-myreads-starter](https://github.com/udacity/reactnd-project-myreads-starter)
