@@ -51,3 +51,8 @@ npm start
 - Games
 - Biography
 
+
+## Credits
+
+Styling, icons, the API and BooksAPI.js provided by Udacity Course Instructors:
+[https://github.com/udacity/reactnd-project-myreads-starter](https://github.com/udacity/reactnd-project-myreads-starter)
