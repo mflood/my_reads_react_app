@@ -33,16 +33,22 @@ class SearchForm extends Component {
       }
   }
 
+  lookupBookShelf = (bookId) => {
 
-  lookupBookshelf = (bookId) => {
-    console.log("lookupBookshelf", this.props.books) 
-    console.log("bookId", bookId) 
-    return "read"
+    for (const item of this.props.books){
+      console.log("compare", item.id, bookId)
+
+      if (item.id === bookId) {
+        console.log("****** match ******");
+        return item.shelf;
+      }
+    }
+    return "none";
   }
 
   render() {
 
-    const booksToShow = this.state.books.map( (item) =>  ({...item, shelf: "none"}))
+    const booksToShow = this.state.books.map( (item) =>  ({...item, shelf: this.lookupBookShelf(item.id)}))
 
     return (
 <div className="search-books">
