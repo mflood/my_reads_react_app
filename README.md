@@ -40,11 +40,12 @@ npm start
 
 ## Search Terms
 
-The backend api is limited to search terms found here:
+> The backend API is limited to search terms found here:
 
 [https://github.com/udacity/reactnd-project-myreads-starter/blob/0d622b93fa02d06d15234a83f27b84b677c5a627/SEARCH_TERMS.md](https://github.com/udacity/reactnd-project-myreads-starter/blob/0d622b93fa02d06d15234a83f27b84b677c5a627/SEARCH_TERMS.md)
 
-Examples include:
+> Examples include:
+
     - Horror
     - Drawing
     - Games
